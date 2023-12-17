@@ -13,6 +13,9 @@ def create_timestamped_dir():
 def setup_logging(directory):
     log_file = os.path.join(directory, 'activity.log')
     logging.basicConfig(level=logging.DEBUG, filename=log_file, filemode='w')
+    
+    # Log the version information and GitHub URL at the beginning of each log file
+    logging.info("dropbox_forensics 0.1 https://github.com/StefFriend/dropbox_forensics")
 
 def change_link_format(url):
     if url.endswith('?dl=0'):
