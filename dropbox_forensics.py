@@ -16,7 +16,11 @@ def setup_logging(directory):
 
 def change_link_format(url):
     if url.endswith('?dl=0'):
-        return url[:-1] + '1'
+        new_url = url[:-1] + '1'
+        message = f"Changing URL from {url} to {new_url} for direct download."
+        logging.info(message)
+        print(message)
+        return new_url
     return url
 
 def download_file(url, directory):
@@ -51,8 +55,13 @@ def main():
     directory = create_timestamped_dir()
     setup_logging(directory)
     dropbox_link = input("Enter the Dropbox link: ")
-    download_link = change_link_format(dropbox_link)
 
+    # Log and print the download message
+    download_message = f"Downloading from {dropbox_link}"
+    logging.info(download_message)
+    print(download_message)
+
+    download_link = change_link_format(dropbox_link)
     downloaded_file = download_file(download_link, directory)
     if downloaded_file:
         file_hash = compute_hash(downloaded_file)
