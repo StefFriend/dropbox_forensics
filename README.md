@@ -23,10 +23,6 @@ This Python script is designed to download contents from a public Dropbox link. 
 - Python 3
 - Packages listed in `requirements.txt`.
 
-## Contributing
-
-Feel free to fork the project and submit pull requests.
-
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.
