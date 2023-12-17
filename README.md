@@ -1,6 +1,6 @@
 # Dropbox Forensics Downloader
 
-This Python script is designed to download contents from a public Dropbox link. It supports downloading either individual files or entire folders in ZIP format. For folders, the script modifies the link to download them as ZIP files. It logs all HTTP requests and computes the SHA-256 hash of the downloaded file.
+This Python script is designed to download contents from a public Dropbox link. It supports downloading either individual files or entire folders in ZIP format. For folders, It downloads all the items as ZIP files. It logs all HTTP requests and computes the SHA-256 hash of the downloaded file.
 
 ## Features
 
